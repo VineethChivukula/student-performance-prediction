@@ -3,15 +3,12 @@
 
 from setuptools import find_packages, setup
 
-# This function reads the requirements.txt file and returns the list of requirements
 
 HYPHEN_E = "-e ."
 
 
+# This function reads the requirements.txt file and returns the list of requirements
 def get_requirements():
-    '''
-    This function reads the requirements.txt file and returns the list of requirements
-    '''
     with open('requirements.txt') as f:
         requirements = f.read().splitlines()
         if HYPHEN_E in requirements:
