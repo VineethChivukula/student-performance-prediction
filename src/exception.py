@@ -1,9 +1,9 @@
 import sys
 
 
-def error_message_detail(error_message, error_detail):
+def error_message_detail(error_message, error_detail:sys):
     # Extract the exception type, value, and traceback
-    exc_type, exc_value, exc_tb = error_detail
+    exc_type, exc_value, exc_tb = error_detail.exc_info()
 
     # Get the file name where the exception occurred
     file_name = exc_tb.tb_frame.f_code.co_filename
